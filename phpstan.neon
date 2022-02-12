@@ -1,10 +1,13 @@
 parameters:
-    level: 3
-
-    inferPrivatePropertyTypeFromConstructor: true
+    level: 8
 
     paths:
-        - %currentWorkingDirectory%/src
+        - src
 
     ignoreErrors:
-        - '#Unsafe usage of new static\(\)\.#'
+        -
+            message: '#^Method AlphaSnow\\Flysystem\\AliyunOss\\AliyunOssAdapter\:\:getTemporaryUrl\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+            path: src/AliyunOssAdapter.php
+        -
+            message: '#^Method AlphaSnow\\Flysystem\\AliyunOss\\AliyunOssAdapter\:\:configToOptions\(\) return type has no value type specified in iterable type array\.$#'
+            path: src/AliyunOssAdapter.php

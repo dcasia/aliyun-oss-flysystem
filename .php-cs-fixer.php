@@ -1,4 +1,5 @@
 <?php
+
 return (new PhpCsFixer\Config())
     ->setRules([
         '@PSR2' => true,
@@ -39,10 +40,12 @@ return (new PhpCsFixer\Config())
                 'property',
             ],
         ],
+        'method_argument_space' => [
+            'on_multiline' => 'ignore'
+        ],
     ])
     ->setFinder(
         PhpCsFixer\Finder::create()
             ->exclude('vendor')
             ->in([__DIR__.'/src/',__DIR__.'/tests/',__DIR__.'/examples/'])
-    )
-;
+    );
